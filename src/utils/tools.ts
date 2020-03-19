@@ -50,6 +50,7 @@ export const defaultIgnores = [
   '.git',
   '.idea',
   '.github',
+  'public',
 ]
 
 const isIgnore = (filePath: string): boolean => {
@@ -82,11 +83,12 @@ const collect = (currentPath: string) => {
 }
 
 export const ignoreUpgradeFiles = [
-  'next.config.js',
+  'blog.config.js',
   'LICENSE',
   'package.json',
   'yarn.lock',
   '.gitignore',
+  'favicon.ico',
 ]
 
 export const upgradeFiles = async (tempDir: string, userDir: string) => {
