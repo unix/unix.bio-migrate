@@ -102,6 +102,7 @@ export const upgradeFiles = async (tempDir: string, userDir: string) => {
     
     const reletivePath = item.source.replace(tempDir, '')
     const userFilePath = path.join(userDir, reletivePath)
+    await fs.ensureFile(userFilePath)
     await fs.copyFile(item.source, userFilePath)
   }))
 
